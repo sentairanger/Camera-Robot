@@ -37,14 +37,7 @@ Here are the steps you need to take in order to get things running:
 
 ### Running code on boot
 
-To run the code on boot without having to attach an HDMI cable write a simple script using bash like so:
-
-```bash
-#!/bin/bash
-/usr/bin/python /home/pi/Documents/Camera-Robot/devastator_update.py
-```
-
-The full path must be added because when the Pi boots it won't know where to search. After you do save the script under any name. I chose `bootup.sh`. Be sure to make it executable by typing `chmod +x bootup.sh`. Next, since Buster does require this, go into Menu > Preferences > Raspberry Pi Configuration > Resolution > Set Resolution. Set the resolution to anything other than Default or else it won't work. You'll have to reboot for this to work. Once that's done, go back to the terminal, type `cd /etc/xdg/lxsession/LXDE-pi` to edit the autostart file. Since this requires root privileges type `sudo nano autostart` and then on a new line type `@lxterminal -e /home/pi/Documents/Camera-Robot/bootup.sh`. Once that's done make sure to save it and exit. Then reboot the pi to test it out and a terminal should pop up and the code should run. Now, you can boot the pi without any monitor and run the robot as you wish. To gracefully shutdown, hold Shift and S to shutdown. 
+To run the code on boot without having to attach an HDMI cable I included the `bootup.sh` file to make it easier to implement. The full paths are added because when the Pi boots it won't know where to search. Be sure to make it executable by typing `chmod +x bootup.sh`. Next, since Buster does require this, go into Menu > Preferences > Raspberry Pi Configuration > Resolution > Set Resolution. Set the resolution to anything other than Default or else it won't work. You'll have to reboot for this to work. Once that's done, go back to the terminal, type `cd /etc/xdg/lxsession/LXDE-pi` to edit the autostart file. Since this requires root privileges type `sudo nano autostart` and then on a new line type `@lxterminal -e /home/pi/Documents/Camera-Robot/bootup.sh`. Once that's done make sure to save it and exit. Then reboot the pi to test it out and a terminal should pop up and the code should run. Now, you can boot the pi without any monitor and run the robot as you wish. To gracefully shutdown, hold Shift and S to shutdown. 
 
 ### Converting mjpg to mp4
 
