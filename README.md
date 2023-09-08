@@ -42,3 +42,7 @@ To run the code on boot without having to attach an HDMI cable I included the `b
 ### Converting mjpg to mp4
 
 If you want to convert your saved videos to mp4 go into VLC media player, go to Media > Convert/Save > File. Add your files and use the .mp4 file extension and it should be converted. On windows you can download 3rd party sofware to convert mjpg files. 
+
+## Update
+
+Since picamera2 has been introduced, this code has been updated to use this new library. However, the library is under Beta and requires further testing. The `new_devastator_update.py` code uses this new library and can be used with the `bootup.sh` file by pointing to the new file. There is no need to covnert from mjpg to mp4 as both h264 and mp4 files can be natively played with VLC.
