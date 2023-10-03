@@ -45,4 +45,4 @@ If you want to convert your saved videos to mp4 go into VLC media player, go to 
 
 ## Update
 
-Since picamera2 has been introduced, this code has been updated to use this new library. However, the library is under Beta and requires further testing. The `new_devastator_update.py` code uses this new library and can be used with the `bootup.sh` file by pointing to the new file. There is no need to covnert from mjpg to mp4 as both h264 and mp4 files can be natively played with VLC.
+Since picamera2 has been introduced, this code has been updated to use this new library. However, the library is under Beta and requires further testing. The `new_devastator_update.py` code uses this new library and can be used with the `bootup.sh` file by pointing to the new file. There is no need to covnert from mjpg to mp4 as both h264 and mp4 files can be natively played with VLC. I also added `pygame-devastator.py` to allow robot control with pygame. This can also be used with the `bootup.sh` file.
